@@ -1,0 +1,1225 @@
+$ python2 ./pairings.py 
+Point toals after sorting high to low are: ['0_1']
+0_1
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+{1: 6, 2: 9, 3: 5, 4: 20, 5: 3, 6: 1, 7: 17, 8: 15, 9: 2, 10: 12, 11: 14, 12: 10, 13: 19, 14: 11, 15: 8, 16: 18, 17: 7, 18: 16, 19: 13, 20: 4}
+Pairing players 1 and 6
+Pairing players 2 and 9
+Pairing players 3 and 5
+Pairing players 4 and 20
+Pairing players 7 and 17
+Pairing players 8 and 15
+Pairing players 10 and 12
+Pairing players 11 and 14
+Pairing players 13 and 19
+Pairing players 16 and 18
+[]
+{1: [1, 6], 2: [2, 9], 3: [3, 5], 4: [4, 20], 5: [7, 17], 6: [8, 15], 7: [10, 12], 8: [11, 14], 9: [13, 19], 10: [16, 18]}
+Adding result [2, 1, 0] for player 1
+Adding result [1, 2, 0] for player 6
+Adding result [1, 2, 0] for player 2
+Adding result [2, 1, 0] for player 9
+Adding result [0, 2, 0] for player 3
+Adding result [2, 0, 0] for player 5
+Adding result [2, 1, 0] for player 4
+Adding result [1, 2, 0] for player 20
+Adding result [2, 0, 0] for player 7
+Adding result [0, 2, 0] for player 17
+Adding result [0, 2, 0] for player 8
+Adding result [2, 0, 0] for player 15
+Adding result [1, 2, 0] for player 10
+Adding result [2, 1, 0] for player 12
+Adding result [2, 0, 0] for player 11
+Adding result [0, 2, 0] for player 14
+Adding result [2, 0, 0] for player 13
+Adding result [0, 2, 0] for player 19
+Adding result [1, 2, 0] for player 16
+Adding result [2, 1, 0] for player 18
+Point toals after sorting high to low are: ['3_1', '0_1']
+3_1
+[1, 4, 5, 7, 9, 11, 12, 13, 15, 18]
+[1, 4, 5, 7, 9, 11, 12, 13, 15, 18]
+{1: 13, 4: 9, 5: 15, 7: 12, 9: 4, 11: 18, 12: 7, 13: 1, 15: 5, 18: 11}
+Pairing players 1 and 13
+Pairing players 4 and 9
+Pairing players 5 and 15
+Pairing players 7 and 12
+Pairing players 11 and 18
+[]
+0_1
+[2, 3, 6, 8, 10, 14, 16, 17, 19, 20]
+[2, 3, 6, 8, 10, 14, 16, 17, 19, 20]
+{2: 6, 3: 14, 6: 2, 8: 17, 10: 19, 14: 3, 16: 20, 17: 8, 19: 10, 20: 16}
+Pairing players 2 and 6
+Pairing players 3 and 14
+Pairing players 8 and 17
+Pairing players 10 and 19
+Pairing players 16 and 20
+[]
+{1: [1, 13], 2: [4, 9], 3: [5, 15], 4: [7, 12], 5: [11, 18], 6: [2, 6], 7: [3, 14], 8: [8, 17], 9: [10, 19], 10: [16, 20]}
+Adding result [1, 2, 0] for player 1
+Adding result [2, 1, 0] for player 13
+Adding result [1, 2, 0] for player 4
+Adding result [2, 1, 0] for player 9
+Adding result [2, 0, 0] for player 5
+Adding result [0, 2, 0] for player 15
+Adding result [2, 0, 0] for player 7
+Adding result [0, 2, 0] for player 12
+Adding result [0, 2, 0] for player 11
+Adding result [2, 0, 0] for player 18
+Adding result [2, 1, 0] for player 2
+Adding result [1, 2, 0] for player 6
+Adding result [1, 2, 0] for player 3
+Adding result [2, 1, 0] for player 14
+Adding result [1, 2, 0] for player 8
+Adding result [2, 1, 0] for player 17
+Adding result [1, 2, 0] for player 10
+Adding result [2, 1, 0] for player 19
+Adding result [2, 1, 0] for player 16
+Adding result [1, 2, 0] for player 20
+Point toals after sorting high to low are: ['6_1', '3_1', '0_1']
+6_1
+[5, 7, 9, 13, 18]
+[9, 18, 13, 5, 7]
+{9: 7, 18: 13, 13: 18, 7: 9}
+Pairing players 9 and 7
+Pairing players 18 and 13
+[5]
+Player 5 left in 6_1. The index is 0 and the length of totals is 3
+3_1
+[1, 2, 4, 11, 12, 14, 15, 16, 17, 19, 5]
+[1, 2, 4, 5, 11, 12, 14, 15, 16, 17, 19]
+{1: 17, 2: 12, 4: 14, 5: 19, 12: 2, 14: 4, 15: 16, 16: 15, 17: 1, 19: 5}
+Pairing players 1 and 17
+Pairing players 2 and 12
+Pairing players 4 and 14
+Pairing players 5 and 19
+Pairing players 15 and 16
+[11]
+Player 11 left in 3_1. The index is 1 and the length of totals is 3
+0_1
+[3, 6, 8, 10, 20, 11]
+[3, 6, 8, 10, 11, 20]
+{3: 20, 20: 3, 6: 10, 8: 11, 10: 6, 11: 8}
+Pairing players 3 and 20
+Pairing players 6 and 10
+Pairing players 8 and 11
+[]
+{1: [9, 7], 2: [18, 13], 3: [1, 17], 4: [2, 12], 5: [4, 14], 6: [5, 19], 7: [15, 16], 8: [3, 20], 9: [6, 10], 10: [8, 11]}
+Adding result [1, 2, 0] for player 9
+Adding result [2, 1, 0] for player 7
+Adding result [1, 2, 0] for player 18
+Adding result [2, 1, 0] for player 13
+Adding result [0, 2, 0] for player 1
+Adding result [2, 0, 0] for player 17
+Adding result [2, 1, 0] for player 2
+Adding result [1, 2, 0] for player 12
+Adding result [1, 2, 0] for player 4
+Adding result [2, 1, 0] for player 14
+Adding result [2, 1, 0] for player 5
+Adding result [1, 2, 0] for player 19
+Adding result [1, 2, 0] for player 15
+Adding result [2, 1, 0] for player 16
+Adding result [2, 1, 0] for player 3
+Adding result [1, 2, 0] for player 20
+Adding result [2, 0, 0] for player 6
+Adding result [0, 2, 0] for player 10
+Adding result [1, 2, 0] for player 8
+Adding result [2, 1, 0] for player 11
+Point toals after sorting high to low are: ['9_1', '6_1', '3_1', '0_1']
+9_1
+[5, 7, 13]
+[13, 5, 7]
+{13: 7, 7: 13}
+Pairing players 13 and 7
+[5]
+Player 5 left in 9_1. The index is 0 and the length of totals is 4
+6_1
+[2, 9, 11, 14, 16, 17, 18, 5]
+[2, 5, 9, 11, 14, 16, 17, 18]
+{2: 16, 5: 14, 9: 11, 11: 9, 14: 5, 16: 2, 17: 18, 18: 17}
+Pairing players 2 and 16
+Pairing players 5 and 14
+Pairing players 9 and 11
+Pairing players 17 and 18
+[]
+3_1
+[1, 3, 4, 6, 12, 15, 19]
+[1, 3, 4, 6, 12, 15, 19]
+{1: 3, 3: 1, 4: 15, 6: 12, 12: 6, 15: 4}
+Pairing players 1 and 3
+Pairing players 4 and 15
+Pairing players 6 and 12
+[19]
+Player 19 left in 3_1. The index is 2 and the length of totals is 4
+0_1
+[8, 10, 20, 19]
+[8, 10, 19, 20]
+{8: 19, 10: 20, 19: 8, 20: 10}
+Pairing players 8 and 19
+Pairing players 10 and 20
+[]
+{1: [13, 7], 2: [2, 16], 3: [5, 14], 4: [9, 11], 5: [17, 18], 6: [1, 3], 7: [4, 15], 8: [6, 12], 9: [8, 19], 10: [10, 20]}
+Adding result [2, 1, 0] for player 13
+Adding result [1, 2, 0] for player 7
+Adding result [2, 0, 0] for player 2
+Adding result [0, 2, 0] for player 16
+Adding result [1, 2, 0] for player 5
+Adding result [2, 1, 0] for player 14
+Adding result [2, 0, 0] for player 9
+Adding result [0, 2, 0] for player 11
+Adding result [1, 2, 0] for player 17
+Adding result [2, 1, 0] for player 18
+Adding result [1, 2, 0] for player 1
+Adding result [2, 1, 0] for player 3
+Adding result [1, 2, 0] for player 4
+Adding result [2, 1, 0] for player 15
+Adding result [2, 0, 0] for player 6
+Adding result [0, 2, 0] for player 12
+Adding result [2, 0, 0] for player 8
+Adding result [0, 2, 0] for player 19
+Adding result [2, 0, 0] for player 10
+Adding result [0, 2, 0] for player 20
+Point toals after sorting high to low are: ['12_1', '9_1', '6_1', '3_1', '0_1']
+12_1
+[13]
+[13]
+{}
+[13]
+Player 13 left in 12_1. The index is 0 and the length of totals is 5
+9_1
+[2, 5, 7, 9, 14, 18, 13]
+[2, 5, 7, 9, 13, 14, 18]
+{18: 14, 5: 7, 7: 5, 9: 13, 13: 9, 14: 18}
+Pairing players 18 and 14
+Pairing players 5 and 7
+Pairing players 9 and 13
+[2]
+Player 2 left in 9_1. The index is 1 and the length of totals is 5
+6_1
+[3, 6, 11, 15, 16, 17, 2]
+[2, 3, 6, 11, 15, 16, 17]
+{16: 11, 17: 15, 2: 3, 3: 2, 11: 16, 15: 17}
+Pairing players 16 and 11
+Pairing players 17 and 15
+Pairing players 2 and 3
+[6]
+Player 6 left in 6_1. The index is 2 and the length of totals is 5
+3_1
+[1, 4, 8, 10, 12, 19, 6]
+[1, 4, 6, 8, 10, 12, 19]
+{1: 19, 19: 1, 4: 12, 6: 8, 8: 6, 12: 4}
+Pairing players 1 and 19
+Pairing players 4 and 12
+Pairing players 6 and 8
+[10]
+Player 10 left in 3_1. The index is 3 and the length of totals is 5
+0_1
+[20, 10]
+[10, 20]
+{}
+[20, 10]
+Player 20 left in 0_1. The index is 4 and the length of totals is 5
+20 got the bye
+10 got the bye
+{1: [18, 14], 2: [5, 7], 3: [9, 13], 4: [16, 11], 5: [17, 15], 6: [2, 3], 7: [1, 19], 8: [4, 12], 9: [6, 8]}
+Adding result [1, 2, 0] for player 18
+Adding result [2, 1, 0] for player 14
+Adding result [2, 0, 0] for player 5
+Adding result [0, 2, 0] for player 7
+Adding result [1, 2, 0] for player 9
+Adding result [2, 1, 0] for player 13
+Adding result [1, 2, 0] for player 16
+Adding result [2, 1, 0] for player 11
+Adding result [2, 1, 0] for player 17
+Adding result [1, 2, 0] for player 15
+Adding result [2, 0, 0] for player 2
+Adding result [0, 2, 0] for player 3
+Adding result [2, 0, 0] for player 1
+Adding result [0, 2, 0] for player 19
+Adding result [2, 0, 0] for player 4
+Adding result [0, 2, 0] for player 12
+Adding result [2, 0, 0] for player 6
+Adding result [0, 2, 0] for player 8
+Point toals after sorting high to low are: ['15_1', '12_1', '9_1', '6_1', '3_1']
+15_1
+[13]
+[13]
+{}
+[13]
+Player 13 left in 15_1. The index is 0 and the length of totals is 5
+12_1
+[2, 5, 14, 13]
+[2, 5, 14, 13]
+{2: 5, 13: 14, 14: 13, 5: 2}
+Pairing players 2 and 5
+Pairing players 13 and 14
+[]
+9_1
+[6, 7, 9, 11, 17, 18]
+[6, 7, 9, 11, 17, 18]
+{17: 9, 18: 7, 6: 11, 7: 18, 9: 17, 11: 6}
+Pairing players 17 and 9
+Pairing players 18 and 7
+Pairing players 6 and 11
+[]
+6_1
+[1, 3, 4, 10, 15, 16]
+[1, 3, 4, 10, 15, 16]
+{16: 10, 1: 4, 3: 15, 4: 1, 10: 16, 15: 3}
+Pairing players 16 and 10
+Pairing players 1 and 4
+Pairing players 3 and 15
+[]
+3_1
+[8, 12, 19, 20]
+[8, 20, 19, 12]
+{8: 20, 12: 19, 19: 12, 20: 8}
+Pairing players 8 and 20
+Pairing players 12 and 19
+[]
+{1: [2, 5], 2: [13, 14], 3: [17, 9], 4: [18, 7], 5: [6, 11], 6: [16, 10], 7: [1, 4], 8: [3, 15], 9: [8, 20], 10: [12, 19]}
+Adding result [2, 0, 0] for player 2
+Adding result [0, 2, 0] for player 5
+Adding result [1, 2, 0] for player 13
+Adding result [2, 1, 0] for player 14
+Adding result [2, 1, 0] for player 17
+Adding result [1, 2, 0] for player 9
+Adding result [1, 2, 0] for player 18
+Adding result [2, 1, 0] for player 7
+Adding result [2, 0, 0] for player 6
+Adding result [0, 2, 0] for player 11
+Adding result [1, 2, 0] for player 16
+Adding result [2, 1, 0] for player 10
+Adding result [1, 2, 0] for player 1
+Adding result [2, 1, 0] for player 4
+Adding result [1, 2, 0] for player 3
+Adding result [2, 1, 0] for player 15
+Adding result [2, 1, 0] for player 8
+Adding result [1, 2, 0] for player 20
+Adding result [1, 2, 0] for player 12
+Adding result [2, 1, 0] for player 19
+{
+    "1": {
+        "Points": 6, 
+        "Results": [
+            [
+                2, 
+                1, 
+                0
+            ], 
+            [
+                1, 
+                2, 
+                0
+            ], 
+            [
+                0, 
+                2, 
+                0
+            ], 
+            [
+                1, 
+                2, 
+                0
+            ], 
+            [
+                2, 
+                0, 
+                0
+            ], 
+            [
+                1, 
+                2, 
+                0
+            ]
+        ], 
+        "OMW%": "0.55556", 
+        "Name": "James", 
+        "Opponents": [
+            6, 
+            13, 
+            17, 
+            3, 
+            19, 
+            4
+        ]
+    }, 
+    "2": {
+        "Points": 15, 
+        "Results": [
+            [
+                1, 
+                2, 
+                0
+            ], 
+            [
+                2, 
+                1, 
+                0
+            ], 
+            [
+                2, 
+                1, 
+                0
+            ], 
+            [
+                2, 
+                0, 
+                0
+            ], 
+            [
+                2, 
+                0, 
+                0
+            ], 
+            [
+                2, 
+                0, 
+                0
+            ]
+        ], 
+        "OMW%": "0.47167", 
+        "Name": "Robert", 
+        "Opponents": [
+            9, 
+            6, 
+            12, 
+            16, 
+            3, 
+            5
+        ]
+    }, 
+    "3": {
+        "Points": 6, 
+        "Results": [
+            [
+                0, 
+                2, 
+                0
+            ], 
+            [
+                1, 
+                2, 
+                0
+            ], 
+            [
+                2, 
+                1, 
+                0
+            ], 
+            [
+                2, 
+                1, 
+                0
+            ], 
+            [
+                0, 
+                2, 
+                0
+            ], 
+            [
+                1, 
+                2, 
+                0
+            ]
+        ], 
+        "OMW%": "0.58278", 
+        "Name": "John", 
+        "Opponents": [
+            5, 
+            14, 
+            20, 
+            1, 
+            2, 
+            15
+        ]
+    }, 
+    "4": {
+        "Points": 9, 
+        "Results": [
+            [
+                2, 
+                1, 
+                0
+            ], 
+            [
+                1, 
+                2, 
+                0
+            ], 
+            [
+                1, 
+                2, 
+                0
+            ], 
+            [
+                1, 
+                2, 
+                0
+            ], 
+            [
+                2, 
+                0, 
+                0
+            ], 
+            [
+                2, 
+                1, 
+                0
+            ]
+        ], 
+        "OMW%": "0.47111", 
+        "Name": "Michael", 
+        "Opponents": [
+            20, 
+            9, 
+            14, 
+            15, 
+            12, 
+            1
+        ]
+    }, 
+    "5": {
+        "Points": 12, 
+        "Results": [
+            [
+                2, 
+                0, 
+                0
+            ], 
+            [
+                2, 
+                0, 
+                0
+            ], 
+            [
+                2, 
+                1, 
+                0
+            ], 
+            [
+                1, 
+                2, 
+                0
+            ], 
+            [
+                2, 
+                0, 
+                0
+            ], 
+            [
+                0, 
+                2, 
+                0
+            ]
+        ], 
+        "OMW%": "0.58333", 
+        "Name": "David", 
+        "Opponents": [
+            3, 
+            15, 
+            19, 
+            14, 
+            7, 
+            2
+        ]
+    }, 
+    "6": {
+        "Points": 12, 
+        "Results": [
+            [
+                1, 
+                2, 
+                0
+            ], 
+            [
+                1, 
+                2, 
+                0
+            ], 
+            [
+                2, 
+                0, 
+                0
+            ], 
+            [
+                2, 
+                0, 
+                0
+            ], 
+            [
+                2, 
+                0, 
+                0
+            ], 
+            [
+                2, 
+                0, 
+                0
+            ]
+        ], 
+        "OMW%": "0.47167", 
+        "Name": "William", 
+        "Opponents": [
+            1, 
+            2, 
+            10, 
+            12, 
+            8, 
+            11
+        ]
+    }, 
+    "7": {
+        "Points": 12, 
+        "Results": [
+            [
+                2, 
+                0, 
+                0
+            ], 
+            [
+                2, 
+                0, 
+                0
+            ], 
+            [
+                2, 
+                1, 
+                0
+            ], 
+            [
+                1, 
+                2, 
+                0
+            ], 
+            [
+                0, 
+                2, 
+                0
+            ], 
+            [
+                2, 
+                1, 
+                0
+            ]
+        ], 
+        "OMW%": "0.58278", 
+        "Name": "Richard", 
+        "Opponents": [
+            17, 
+            12, 
+            9, 
+            13, 
+            5, 
+            18
+        ]
+    }, 
+    "8": {
+        "Points": 6, 
+        "Results": [
+            [
+                0, 
+                2, 
+                0
+            ], 
+            [
+                1, 
+                2, 
+                0
+            ], 
+            [
+                1, 
+                2, 
+                0
+            ], 
+            [
+                2, 
+                0, 
+                0
+            ], 
+            [
+                0, 
+                2, 
+                0
+            ], 
+            [
+                2, 
+                1, 
+                0
+            ]
+        ], 
+        "OMW%": "0.49944", 
+        "Name": "Joseph", 
+        "Opponents": [
+            15, 
+            17, 
+            11, 
+            19, 
+            6, 
+            20
+        ]
+    }, 
+    "9": {
+        "Points": 9, 
+        "Results": [
+            [
+                2, 
+                1, 
+                0
+            ], 
+            [
+                2, 
+                1, 
+                0
+            ], 
+            [
+                1, 
+                2, 
+                0
+            ], 
+            [
+                2, 
+                0, 
+                0
+            ], 
+            [
+                1, 
+                2, 
+                0
+            ], 
+            [
+                1, 
+                2, 
+                0
+            ]
+        ], 
+        "OMW%": "0.66667", 
+        "Name": "Thomas", 
+        "Opponents": [
+            2, 
+            4, 
+            7, 
+            11, 
+            13, 
+            17
+        ]
+    }, 
+    "10": {
+        "Points": 9, 
+        "Results": [
+            [
+                1, 
+                2, 
+                0
+            ], 
+            [
+                1, 
+                2, 
+                0
+            ], 
+            [
+                0, 
+                2, 
+                0
+            ], 
+            [
+                2, 
+                0, 
+                0
+            ], 
+            [
+                0, 
+                0, 
+                0
+            ], 
+            [
+                2, 
+                1, 
+                0
+            ]
+        ], 
+        "OMW%": "0.39867", 
+        "Name": "Charles", 
+        "Opponents": [
+            12, 
+            19, 
+            6, 
+            20, 
+            "bye", 
+            16
+        ]
+    }, 
+    "11": {
+        "Points": 9, 
+        "Results": [
+            [
+                2, 
+                0, 
+                0
+            ], 
+            [
+                0, 
+                2, 
+                0
+            ], 
+            [
+                2, 
+                1, 
+                0
+            ], 
+            [
+                0, 
+                2, 
+                0
+            ], 
+            [
+                2, 
+                1, 
+                0
+            ], 
+            [
+                0, 
+                2, 
+                0
+            ]
+        ], 
+        "OMW%": "0.52778", 
+        "Name": "Christopher", 
+        "Opponents": [
+            14, 
+            18, 
+            8, 
+            9, 
+            16, 
+            6
+        ]
+    }, 
+    "12": {
+        "Points": 3, 
+        "Results": [
+            [
+                2, 
+                1, 
+                0
+            ], 
+            [
+                0, 
+                2, 
+                0
+            ], 
+            [
+                1, 
+                2, 
+                0
+            ], 
+            [
+                0, 
+                2, 
+                0
+            ], 
+            [
+                0, 
+                2, 
+                0
+            ], 
+            [
+                1, 
+                2, 
+                0
+            ]
+        ], 
+        "OMW%": "0.58333", 
+        "Name": "Daniel", 
+        "Opponents": [
+            10, 
+            7, 
+            2, 
+            6, 
+            4, 
+            19
+        ]
+    }, 
+    "13": {
+        "Points": 15, 
+        "Results": [
+            [
+                2, 
+                0, 
+                0
+            ], 
+            [
+                2, 
+                1, 
+                0
+            ], 
+            [
+                2, 
+                1, 
+                0
+            ], 
+            [
+                2, 
+                1, 
+                0
+            ], 
+            [
+                2, 
+                1, 
+                0
+            ], 
+            [
+                1, 
+                2, 
+                0
+            ]
+        ], 
+        "OMW%": "0.52778", 
+        "Name": "Matthew", 
+        "Opponents": [
+            19, 
+            1, 
+            18, 
+            7, 
+            9, 
+            14
+        ]
+    }, 
+    "14": {
+        "Points": 15, 
+        "Results": [
+            [
+                0, 
+                2, 
+                0
+            ], 
+            [
+                2, 
+                1, 
+                0
+            ], 
+            [
+                2, 
+                1, 
+                0
+            ], 
+            [
+                2, 
+                1, 
+                0
+            ], 
+            [
+                2, 
+                1, 
+                0
+            ], 
+            [
+                2, 
+                1, 
+                0
+            ]
+        ], 
+        "OMW%": "0.55556", 
+        "Name": "Anthony", 
+        "Opponents": [
+            11, 
+            3, 
+            4, 
+            5, 
+            18, 
+            13
+        ]
+    }, 
+    "15": {
+        "Points": 9, 
+        "Results": [
+            [
+                2, 
+                0, 
+                0
+            ], 
+            [
+                0, 
+                2, 
+                0
+            ], 
+            [
+                1, 
+                2, 
+                0
+            ], 
+            [
+                2, 
+                1, 
+                0
+            ], 
+            [
+                1, 
+                2, 
+                0
+            ], 
+            [
+                2, 
+                1, 
+                0
+            ]
+        ], 
+        "OMW%": "0.47222", 
+        "Name": "Mark", 
+        "Opponents": [
+            8, 
+            5, 
+            16, 
+            4, 
+            17, 
+            3
+        ]
+    }, 
+    "16": {
+        "Points": 6, 
+        "Results": [
+            [
+                1, 
+                2, 
+                0
+            ], 
+            [
+                2, 
+                1, 
+                0
+            ], 
+            [
+                2, 
+                1, 
+                0
+            ], 
+            [
+                0, 
+                2, 
+                0
+            ], 
+            [
+                1, 
+                2, 
+                0
+            ], 
+            [
+                1, 
+                2, 
+                0
+            ]
+        ], 
+        "OMW%": "0.52722", 
+        "Name": "Donald", 
+        "Opponents": [
+            18, 
+            20, 
+            15, 
+            2, 
+            11, 
+            10
+        ]
+    }, 
+    "17": {
+        "Points": 12, 
+        "Results": [
+            [
+                0, 
+                2, 
+                0
+            ], 
+            [
+                2, 
+                1, 
+                0
+            ], 
+            [
+                2, 
+                0, 
+                0
+            ], 
+            [
+                1, 
+                2, 
+                0
+            ], 
+            [
+                2, 
+                1, 
+                0
+            ], 
+            [
+                2, 
+                1, 
+                0
+            ]
+        ], 
+        "OMW%": "0.47222", 
+        "Name": "Steven", 
+        "Opponents": [
+            7, 
+            8, 
+            1, 
+            18, 
+            15, 
+            9
+        ]
+    }, 
+    "18": {
+        "Points": 9, 
+        "Results": [
+            [
+                2, 
+                1, 
+                0
+            ], 
+            [
+                2, 
+                0, 
+                0
+            ], 
+            [
+                1, 
+                2, 
+                0
+            ], 
+            [
+                2, 
+                1, 
+                0
+            ], 
+            [
+                1, 
+                2, 
+                0
+            ], 
+            [
+                1, 
+                2, 
+                0
+            ]
+        ], 
+        "OMW%": "0.63889", 
+        "Name": "Paul", 
+        "Opponents": [
+            16, 
+            11, 
+            13, 
+            17, 
+            14, 
+            7
+        ]
+    }, 
+    "19": {
+        "Points": 6, 
+        "Results": [
+            [
+                0, 
+                2, 
+                0
+            ], 
+            [
+                2, 
+                1, 
+                0
+            ], 
+            [
+                1, 
+                2, 
+                0
+            ], 
+            [
+                0, 
+                2, 
+                0
+            ], 
+            [
+                0, 
+                2, 
+                0
+            ], 
+            [
+                2, 
+                1, 
+                0
+            ]
+        ], 
+        "OMW%": "0.49944", 
+        "Name": "Andrew", 
+        "Opponents": [
+            13, 
+            10, 
+            5, 
+            8, 
+            1, 
+            12
+        ]
+    }, 
+    "20": {
+        "Points": 3, 
+        "Results": [
+            [
+                1, 
+                2, 
+                0
+            ], 
+            [
+                1, 
+                2, 
+                0
+            ], 
+            [
+                1, 
+                2, 
+                0
+            ], 
+            [
+                0, 
+                2, 
+                0
+            ], 
+            [
+                0, 
+                0, 
+                0
+            ], 
+            [
+                1, 
+                2, 
+                0
+            ]
+        ], 
+        "OMW%": "0.40000", 
+        "Name": "Joshua", 
+        "Opponents": [
+            4, 
+            16, 
+            3, 
+            10, 
+            "bye", 
+            8
+        ]
+    }
+}
+(14, 'Anthony', 15, '0.55556')
+(13, 'Matthew', 15, '0.52778')
+(2, 'Robert', 15, '0.47167')
+(5, 'David', 12, '0.58333')
+(7, 'Richard', 12, '0.58278')
+(17, 'Steven', 12, '0.47222')
+(6, 'William', 12, '0.47167')
+(9, 'Thomas', 9, '0.66667')
+(18, 'Paul', 9, '0.63889')
+(11, 'Christopher', 9, '0.52778')
+(15, 'Mark', 9, '0.47222')
+(4, 'Michael', 9, '0.47111')
+(10, 'Charles', 9, '0.39867')
+(3, 'John', 6, '0.58278')
+(1, 'James', 6, '0.55556')
+(16, 'Donald', 6, '0.52722')
+(8, 'Joseph', 6, '0.49944')
+(19, 'Andrew', 6, '0.49944')
+(12, 'Daniel', 3, '0.58333')
+(20, 'Joshua', 3, '0.40000')
+
