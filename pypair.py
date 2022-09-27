@@ -217,50 +217,7 @@ class Tournament(object):
 
                         while len(pointLists[points]) > 0:
                             pointLists[nextPoints].append(pointLists[points].pop(0))
-                        
-            #Reassign players with fixed seating needs
-            openTables = []
-            displacedMatches = []
-            
-            #Create a copy of the pairings so we can edit the pairings during the loop
-            clonePairings = self.roundPairings.copy()
-            
-            for table in clonePairings:
-                p1 = self.roundPairings[table][0]
-                p2 = self.roundPairings[table][1]
-                
-                #Check to see if either of our players needs fixed seating
-                if self.playersDict[p1]["Fixed Seating"]:
-                    fixed = self.playersDict[p1]["Fixed Seating"]
-                elif self.playersDict[p2]["Fixed Seating"]:
-                    fixed = self.playersDict[p2]["Fixed Seating"]
-                else:
-                    fixed = False
-                
-                if fixed and fixed != table:
-                    if fixed in self.roundPairings:
-                        #Check to see if the fixed table has been assigned to a match
-                        displacedMatches.append(self.roundPairings.pop(fixed))
 
-                    #Note that the table that had been assigned is now open
-                    openTables.append(table)
-
-                    #Move the match
-                    printdbg( "[Fixed Seating] Moving table %s to table %s"%(table, fixed), 2)
-                    self.roundPairings[fixed] = self.roundPairings.pop(table)
-            
-            #Assign players displaced by a fixed seating to new tables
-            for match in displacedMatches:
-                if len(openTables):
-                    self.roundPairings[openTables[0]] = match
-                    del(openTables[0])
-                else:
-                    self.pairPlayers(match[0], match[1])
-                    
-            #If there are open tables still, remove them from the matches out
-            for table in openTables:
-                self.tablesOut.remove(table)
-            
             #Return the pairings for this round
             return self.roundPairings
         else:
