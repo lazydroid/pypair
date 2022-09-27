@@ -1,3 +1,5 @@
+#!/usr/bin/env python2
+
 '''
 A tool for pairing players in a swiss event
 '''
@@ -17,6 +19,7 @@ except:
 
 import csv
 import random
+import json
 
 dbg = True
 debuglevel = 1
@@ -33,21 +36,21 @@ class Tournament(object):
         self.startingTable = startingTable
         #Pairings for the current round
         self.roundPairings = {}
-        
+
         #this defines the max number of players in a network point range before we split it up. Lower the number, faster the calculations
-        self.MaxGroup = 50 
-        
+        self.MaxGroup = 50
+
         #Contains lists of players sorted by how many points they currently have
-        self.pointLists = {}
-        
+        #self.pointLists = {}
+
         #Contains a list of points in the event from high to low
-        self.pointTotals = []
-        
+        #self.pointTotals = []
+
         #Contains the list of tables that haven't reported for the current round
         self.tablesOut = []
-        
-    def addPlayer( self, IDNumber, playerName, fixedSeating=False ):
-        
+
+    def addPlayer( self, IDNumber, playerName ):
+
         '''
         Holds player data that are in the event.
 
@@ -60,14 +63,35 @@ class Tournament(object):
                 OMW%:Float,
                 Fixed Seating:Bool/Int, if False no fixed seating, if int that is the assigned table number}
         '''
-        
+
         self.playersDict[IDNumber] = {  "Name": playerName,
                                         "Opponents":[],
                                         "Results":[],
                                         "Points":0,
-                                        "OMW%": 0.0,
-                                        "Fixed Seating":fixedSeating}
-    
+                                        "OMW%": 0.0
+        }
+
+    def save( self, fout ):
+        json.dump( {
+            'playersDict' : self.playersDict,
+            'currentRound' : self.currentRound,
+            'roundPairings' : self.roundPairings,
+            'tablesOut' : self.tablesOut,
+        }, fout, indent=4 )
+
+    def load( self, fin ):
+        data = json.load( fin )
+        self.assign( data )
+
+    def assign( self, data ):
+        self.playersDict = data['playersDict']
+        self.currentRound = data['currentRound']
+        self.roundPairings = data['roundPairings']
+        self.tablesOut = data['tablesOut']
+
+        self.playersDict = { int(k):v for k, v in self.playersDict.items() }
+        self.roundPairings = { int(k):v for k, v in self.roundPairings.items() }
+
     def loadPlayersCSV( self, pathToLoad ):
         with open(pathToLoad) as csvfile:
             playerReader = csv.reader(csvfile, delimiter=',')
@@ -83,7 +107,7 @@ class Tournament(object):
 
     def loadEventData( self, pathToLoad ):
         self.playersDict = pickle.load( open( pathToLoad, "rb" ) )
-        
+
     def saveEventData( self, pathToSave ):
         pickle.dump( self.playersDict, open( pathToSave, "wb" ))
 
@@ -91,66 +115,68 @@ class Tournament(object):
         """
         Process overview:
             1.) Create lists of players with each point value
-            
+
             2.) Create a list of all current points and sort from highest to lowest
-            
+
             3.) Loop through each list of points and assign players opponents based with same points
-            
+
             4.) Check for left over players and assign a pair down
         """
         if not len(self.tablesOut) or forcePair:
             self.currentRound += 1
-            
+
             #Clear old round pairings
             self.roundPairings = {}
             self.openTable = self.startingTable
-            
+
             #Contains lists of players sorted by how many points they currently have
-            self.pointLists = pointLists = {}
-            
+            #self.pointLists = 
+            pointLists = {}
+
             #Contains a list of points in the event from high to low
-            self.pointTotals = pointTotals = []
-            
+            #self.pointTotals = 
+            pointTotals = []
+
             #Counts our groupings for each point amount
-            self.countPoints = {}
-            
+            countPoints = {}
+
             #Add all players to pointLists
             for player in self.playersDict:
                 info = self.playersDict[player]
                 #If this point amount isn't in the list, add it
                 if "%s_1"%info['Points'] not in pointLists:
                     pointLists["%s_1"%info['Points']] = []
-                    self.countPoints[info['Points']] = 1
-                
+                    countPoints[info['Points']] = 1
+
                 #Breakers the players into groups of their current points up to the max group allowed.
                 #Smaller groups mean faster calculations
-                if len(pointLists["%s_%s"%(info['Points'], self.countPoints[info['Points']])]) > self.MaxGroup:
-                    self.countPoints[info['Points']] += 1
-                    pointLists["%s_%s"%(info['Points'], self.countPoints[info['Points']])] = []
-                
+                if len(pointLists["%s_%s"%(info['Points'], countPoints[info['Points']])]) > self.MaxGroup:
+                    countPoints[info['Points']] += 1
+                    pointLists["%s_%s"%(info['Points'], countPoints[info['Points']])] = []
+
                 #Add our player to the correct group
-                pointLists["%s_%s"%(info['Points'], self.countPoints[info['Points']])].append(player)
-                
+                pointLists["%s_%s"%(info['Points'], countPoints[info['Points']])].append(player)
+
             #Add all points in use to pointTotals
             for points in pointLists:
                 pointTotals.append(points)
-                
+
             #Sort our point groups based on points
             pointTotals.sort(reverse=True, key=lambda s: int(s.split('_')[0]))
-            
+
             printdbg( "Point toals after sorting high to low are: %s"%pointTotals, 3 )
 
             #Actually pair the players utilizing graph theory networkx
             for points in pointTotals:
-                printdbg( points, 5 ) 
-                
+                printdbg( points, 5 )
+
                 #Create the graph object and add all players to it
                 bracketGraph = nx.Graph()
                 bracketGraph.add_nodes_from(pointLists[points])
-                
+
                 printdbg( pointLists[points], 5 )
                 printdbg( bracketGraph.nodes(), 5 )
-                
+
                 #Create edges between all players in the graph who haven't already played
                 for player in bracketGraph.nodes():
                     for opponent in bracketGraph.nodes():
@@ -162,10 +188,10 @@ class Tournament(object):
                                 wgt = 10
                             #Create edge
                             bracketGraph.add_edge(player, opponent, weight=wgt)
-                
+
                 #Generate pairings from the created graph
                 pairings = dict(nx.max_weight_matching(bracketGraph))
-                
+
                 printdbg( pairings, 3 )
 
                 #Actually pair the players based on the matching we found
@@ -188,7 +214,7 @@ class Tournament(object):
                     else:
                         #Add our player to the next point group down
                         nextPoints = pointTotals[pointTotals.index(points) + 1]
-                        
+
                         while len(pointLists[points]) > 0:
                             pointLists[nextPoints].append(pointLists[points].pop(0))
                         
