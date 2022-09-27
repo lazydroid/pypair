@@ -222,62 +222,64 @@ class Tournament(object):
             return self.roundPairings
         else:
             #If there are still tables out and we haven't had a forced pairing, return the tables still "playing"
-            return self.tablesOut
-                
+            print 'unable to pair while these tables are still playing:', self.tablesOut
+            return {}
+
     def pairPlayers( self, p1, p2 ):
         printdbg("Pairing players %s and %s"%(p1, p2), 5)
-        
+
         self.playersDict[p1]["Opponents"].append(p2)
         self.playersDict[p2]["Opponents"].append(p1)
-            
+
         self.roundPairings[self.openTable] = [p1, p2]
         self.tablesOut.append(self.openTable)
-        
+
         self.openTable += 1
 
     def assignBye( self, p1, reason="bye" ):
         printdbg( "%s got the bye"%p1, 2)
         self.playersDict[p1]["Results"].append([0,0,0])
-        
+
         self.playersDict[p1]["Opponents"].append("bye")
-        
+
         #Add points for "winning"
         self.playersDict[p1]["Points"] += byePoints
-        
+
     def reportMatch( self, table, result ):
         #table is an integer of the table number, result is a list
         p1 = self.roundPairings[table][0]
         p2 = self.roundPairings[table][1]
-        if result[0] == result[1]:
+        #Figure out who won and assing points
+        if result[0] > result[1]:
+            # first player wins
+            self.playersDict[p1]["Points"] += winPoints
+            printdbg("Adding result %s for player %s"%(result, p1), 3)
+            self.playersDict[p1]["Results"].append(result)
+            otresult = [result[1], result[0], result[2]]
+            printdbg("Adding result %s for player %s"%(otresult, p2), 3)
+            self.playersDict[p2]["Results"].append(otresult)
+        elif result[0] < result[1]:
+            # second player wins
+            self.playersDict[p2]["Points"] += winPoints
+            printdbg("Adding result %s for player %s"%(result, p1), 3)
+            self.playersDict[p1]["Results"].append(result)
+            otresult = [result[1], result[0], result[2]]
+            printdbg("Adding result %s for player %s"%(otresult, p2), 3)
+            self.playersDict[p2]["Results"].append(otresult)
+        else:
             #If values are the same they drew! Give'em each a point
             self.playersDict[p1]["Points"] += drawPoints
             self.playersDict[p1]["Results"].append(result)
             self.playersDict[p2]["Points"] += drawPoints
             self.playersDict[p2]["Results"].append(result)
-        else:
-            #Figure out who won and assing points
-            if result[0] > result[1]:
-                self.playersDict[p1]["Points"] += winPoints
-                printdbg("Adding result %s for player %s"%(result, p1), 3)
-                self.playersDict[p1]["Results"].append(result)
-                otresult = [result[1], result[0], result[2]]
-                printdbg("Adding result %s for player %s"%(otresult, p2), 3)
-                self.playersDict[p2]["Results"].append(otresult)
-            elif result[1] > result[0]:
-                self.playersDict[p2]["Points"] += winPoints
-                printdbg("Adding result %s for player %s"%(result, p1), 3)
-                self.playersDict[p1]["Results"].append(result)
-                otresult = [result[1], result[0], result[2]]
-                printdbg("Adding result %s for player %s"%(otresult, p2), 3)
-                self.playersDict[p2]["Results"].append(otresult)
-        
+
         #Remove table reported from open tables
         self.tablesOut.remove(table)
-        
+
         #When the last table reports, update tie breakers automatically
         if not len(self.tablesOut):
             self.calculateTieBreakers()
-        
+
     def calculateTieBreakers( self ):
         for p in self.playersDict:
             opponentWinPercents = []
@@ -287,13 +289,13 @@ class Tournament(object):
                 if opponent != "bye":
                     #Calculate win percent out to five decimal places, minimum of .33 per person
                     winPercent = max(self.playersDict[opponent]["Points"] / float((len(self.playersDict[opponent]["Opponents"])*3)), 0.33)
-                    printdbg( "%s contributed %s breakers"%(opponent, winPercent), 3)
+                    #printdbg( "%s contributed %s breakers"%(opponent, winPercent), 3)
                     opponentWinPercents.append(winPercent)
-            
+
             #Make sure we have opponents
             if len(opponentWinPercents):
                 self.playersDict[p]["OMW%"] = "%.5f" %(sum(opponentWinPercents) / float(len(opponentWinPercents)))
 
 def printdbg( msg, level=1 ):
-    if dbg == True and level <= debuglevel:
-        print(msg)
+    #if dbg == True and level <= debuglevel:
+    print(msg)
