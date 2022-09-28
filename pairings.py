@@ -110,6 +110,9 @@ name_list = '''
 
 names = [n.split()[1] for n in name_list.split('\n') if len(n) > 5]
 
+names = [ 'Yuta', 'Liu, An-Chi', 'Mirai', 'Kazuki Tsurumi', 'Devwrat', 'lenik', 'Andrew Huie', 'yoshiki', 'Divyansh', 'puttichai', 'Takeshi', 'Yuto', 'Gabriel', 'Sergey', 'jeonghyun', 'Faizan' ]
+names = [ 'Yuta', 'Liu, An-Chi', 'Mirai', 'Kazuki Tsurumi', 'Devwrat', 'lenik', 'Andrew Huie', 'yoshiki', 'puttichai', 'Takeshi', 'Yuto', 'Gabriel', 'Sergey', 'jeonghyun', 'Faizan' ]
+
 Players = { a+1:b for a,b in enumerate(names[:20]) }
 #print( Players )
 #sys.exit(1)
@@ -153,6 +156,61 @@ if __name__ == '__main__' :
 	else:
 		to.assign( recent )
 
+
+	def print_standing() :
+		data = [ [key, to.playersDict[key]['Name'],  to.playersDict[key]['Points'],  to.playersDict[key]['OMW%']] for key in sorted(to.playersDict.keys()) ]
+		data.sort( key=lambda x : x[2] + float(x[3]), reverse=True )
+		for d in data :
+			print d[0], d[1], d[2], d[3]
+
+	# round 1
+#	to.reportMatch(1, [0,2,0])
+#	to.reportMatch(2, [0,2,0])
+#	to.reportMatch(3, [0,2,0])
+#	to.reportMatch(4, [2,0,0])
+#	to.reportMatch(5, [2,0,0])
+#	to.reportMatch(6, [2,0,0])
+#	to.reportMatch(7, [2,0,0])
+
+	# round 2
+#	to.reportMatch(1, [2,0,0])
+#	to.reportMatch(2, [2,0,0])
+#	to.reportMatch(3, [0,2,0])
+#	to.reportMatch(4, [2,0,0])
+#	to.reportMatch(5, [0,2,0])
+#	to.reportMatch(6, [2,0,0])
+#	to.reportMatch(7, [2,0,0])
+
+	# round 3
+#	to.reportMatch(1, [0,2,0])
+#	to.reportMatch(2, [0,2,0])
+#	to.reportMatch(3, [2,0,0])
+#	to.reportMatch(4, [2,0,0])
+#	to.reportMatch(5, [2,0,0])
+#	to.reportMatch(6, [2,0,0])
+#	to.reportMatch(7, [0,2,0])
+
+	# round 4
+#	to.reportMatch(1, [0,2,0])
+#	to.reportMatch(2, [0,2,0])
+#	to.reportMatch(3, [2,0,0])
+#	to.reportMatch(4, [0,2,0])
+#	to.reportMatch(5, [2,0,0])
+#	to.reportMatch(6, [0,2,0])
+#	to.reportMatch(7, [2,0,0])
+
+	# round 5
+#	to.reportMatch(1, [0,2,0])
+#	to.reportMatch(2, [2,0,0])
+#	to.reportMatch(3, [0,2,0])
+#	to.reportMatch(4, [2,0,0])
+#	to.reportMatch(5, [2,0,0])
+#	to.reportMatch(6, [2,0,0])
+#	to.reportMatch(7, [2,0,0])
+
+#	print_standing()
+#	sys.exit(1)
+
 	pairings = to.pairRound()
 
 	print( pairings )
@@ -162,6 +220,7 @@ if __name__ == '__main__' :
 		p2 = to.playersDict[pairings[key][1]]['Name']
 		print( "%2d %15s %s" % (key, p1, p2 ))
 
+	'''
 	while len(to.tablesOut) :
 		table = to.tablesOut[-1]
 		to.reportMatch(table, [2,0,0])
@@ -170,10 +229,8 @@ if __name__ == '__main__' :
 
 	print( pairings )
 
-	for key in sorted(pairings.keys()) :
-		p1 = to.playersDict[pairings[key][0]]['Name']
-		p2 = to.playersDict[pairings[key][1]]['Name']
-		print( "%2d %15s %s" % (key, p1, p2 ))
+	print_standing()
+	'''
 
 	now = datetime.datetime.now()
 	suffix = now.strftime( '%Y-%m-%d_%H%M%S' )
@@ -211,10 +268,4 @@ if __name__ == '__main__' :
 
 		#print( json.dumps( to.playersDict, indent=4 ))
 
-		data = [ [key, to.playersDict[key]['Name'],  to.playersDict[key]['Points'],  to.playersDict[key]['OMW%']] for key in sorted(to.playersDict.keys()) ]
-
-		data.sort( key=lambda x : x[2] + float(x[3]), reverse=True )
-
-		for d in data :
-			print d[0], d[1], d[2], d[3]
 '''

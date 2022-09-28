@@ -1,0 +1,289 @@
+{
+    "playersDict": {
+        "1": {
+            "Opponents": [
+                12, 
+                4
+            ], 
+            "Points": 0, 
+            "OMW%": "1.00000", 
+            "Results": [
+                [
+                    0, 
+                    2, 
+                    0
+                ]
+            ], 
+            "Name": "Yuta"
+        }, 
+        "2": {
+            "Opponents": [
+                13, 
+                14
+            ], 
+            "Points": 0, 
+            "OMW%": "1.00000", 
+            "Results": [
+                [
+                    0, 
+                    2, 
+                    0
+                ]
+            ], 
+            "Name": "Liu, An-Chi"
+        }, 
+        "3": {
+            "Opponents": [
+                "bye", 
+                6
+            ], 
+            "Points": 3, 
+            "OMW%": 0.0, 
+            "Results": [
+                [
+                    0, 
+                    0, 
+                    0
+                ]
+            ], 
+            "Name": "Mirai"
+        }, 
+        "4": {
+            "Opponents": [
+                9, 
+                1
+            ], 
+            "Points": 0, 
+            "OMW%": "1.00000", 
+            "Results": [
+                [
+                    0, 
+                    2, 
+                    0
+                ]
+            ], 
+            "Name": "Kazuki Tsurumi"
+        }, 
+        "5": {
+            "Opponents": [
+                11, 
+                12
+            ], 
+            "Points": 3, 
+            "OMW%": "0.33000", 
+            "Results": [
+                [
+                    2, 
+                    0, 
+                    0
+                ]
+            ], 
+            "Name": "Devwrat"
+        }, 
+        "6": {
+            "Opponents": [
+                14, 
+                3
+            ], 
+            "Points": 3, 
+            "OMW%": "0.33000", 
+            "Results": [
+                [
+                    2, 
+                    0, 
+                    0
+                ]
+            ], 
+            "Name": "lenik"
+        }, 
+        "7": {
+            "Opponents": [
+                15, 
+                8
+            ], 
+            "Points": 3, 
+            "OMW%": "0.33000", 
+            "Results": [
+                [
+                    2, 
+                    0, 
+                    0
+                ]
+            ], 
+            "Name": "Andrew Huie"
+        }, 
+        "8": {
+            "Opponents": [
+                10, 
+                7
+            ], 
+            "Points": 3, 
+            "OMW%": "0.33000", 
+            "Results": [
+                [
+                    2, 
+                    0, 
+                    0
+                ]
+            ], 
+            "Name": "yoshiki"
+        }, 
+        "9": {
+            "Opponents": [
+                4, 
+                13
+            ], 
+            "Points": 3, 
+            "OMW%": "0.33000", 
+            "Results": [
+                [
+                    2, 
+                    0, 
+                    0
+                ]
+            ], 
+            "Name": "puttichai"
+        }, 
+        "10": {
+            "Opponents": [
+                8, 
+                "bye"
+            ], 
+            "Points": 3, 
+            "OMW%": "1.00000", 
+            "Results": [
+                [
+                    0, 
+                    2, 
+                    0
+                ], 
+                [
+                    0, 
+                    0, 
+                    0
+                ]
+            ], 
+            "Name": "Takeshi"
+        }, 
+        "11": {
+            "Opponents": [
+                5, 
+                15
+            ], 
+            "Points": 0, 
+            "OMW%": "1.00000", 
+            "Results": [
+                [
+                    0, 
+                    2, 
+                    0
+                ]
+            ], 
+            "Name": "Yuto"
+        }, 
+        "12": {
+            "Opponents": [
+                1, 
+                5
+            ], 
+            "Points": 3, 
+            "OMW%": "0.33000", 
+            "Results": [
+                [
+                    2, 
+                    0, 
+                    0
+                ]
+            ], 
+            "Name": "Gabriel"
+        }, 
+        "13": {
+            "Opponents": [
+                2, 
+                9
+            ], 
+            "Points": 3, 
+            "OMW%": "0.33000", 
+            "Results": [
+                [
+                    2, 
+                    0, 
+                    0
+                ]
+            ], 
+            "Name": "Sergey"
+        }, 
+        "14": {
+            "Opponents": [
+                6, 
+                2
+            ], 
+            "Points": 0, 
+            "OMW%": "1.00000", 
+            "Results": [
+                [
+                    0, 
+                    2, 
+                    0
+                ]
+            ], 
+            "Name": "jeonghyun"
+        }, 
+        "15": {
+            "Opponents": [
+                7, 
+                11
+            ], 
+            "Points": 0, 
+            "OMW%": "1.00000", 
+            "Results": [
+                [
+                    0, 
+                    2, 
+                    0
+                ]
+            ], 
+            "Name": "Faizan"
+        }
+    }, 
+    "roundPairings": {
+        "1": [
+            3, 
+            6
+        ], 
+        "2": [
+            5, 
+            12
+        ], 
+        "3": [
+            7, 
+            8
+        ], 
+        "4": [
+            9, 
+            13
+        ], 
+        "5": [
+            1, 
+            4
+        ], 
+        "6": [
+            2, 
+            14
+        ], 
+        "7": [
+            11, 
+            15
+        ]
+    }, 
+    "tablesOut": [
+        1, 
+        2, 
+        3, 
+        4, 
+        5, 
+        6, 
+        7
+    ], 
+    "currentRound": 2
+}
