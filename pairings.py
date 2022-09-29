@@ -208,8 +208,8 @@ if __name__ == '__main__' :
 #	to.reportMatch(6, [2,0,0])
 #	to.reportMatch(7, [2,0,0])
 
-#	print_standing()
-#	sys.exit(1)
+	print_standing()
+	sys.exit(1)
 
 	pairings = to.pairRound()
 
