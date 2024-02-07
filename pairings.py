@@ -113,6 +113,13 @@ names = [n.split()[1] for n in name_list.split('\n') if len(n) > 5]
 names = [ 'Yuta', 'Liu, An-Chi', 'Mirai', 'Kazuki Tsurumi', 'Devwrat', 'lenik', 'Andrew Huie', 'yoshiki', 'Divyansh', 'puttichai', 'Takeshi', 'Yuto', 'Gabriel', 'Sergey', 'jeonghyun', 'Faizan' ]
 names = [ 'Yuta', 'Liu, An-Chi', 'Mirai', 'Kazuki Tsurumi', 'Devwrat', 'lenik', 'Andrew Huie', 'yoshiki', 'puttichai', 'Takeshi', 'Yuto', 'Gabriel', 'Sergey', 'jeonghyun', 'Faizan' ]
 
+names = [
+	'Bryan', 'Rahmat Hidayat', 'Kei', 'Changhong', 'Heman Gandhi', 'Mirai', 'Max', 'Inno', 'Hiroki',
+	'Denis', 'puttichai', 'Tan', 'Ansh',	'Yoshito', 'Raymond', 'Devwrat', 'Rafael', 'Masakazu'
+]
+
+
+
 Players = { a+1:b for a,b in enumerate(names[:20]) }
 #print( Players )
 #sys.exit(1)
@@ -207,6 +214,62 @@ if __name__ == '__main__' :
 #	to.reportMatch(5, [2,0,0])
 #	to.reportMatch(6, [2,0,0])
 #	to.reportMatch(7, [2,0,0])
+
+
+	# round 1
+#	to.reportMatch(1, [0,2,0])
+#	to.reportMatch(2, [2,0,0])
+#	to.reportMatch(3, [0,2,0])
+#	to.reportMatch(4, [0,2,0])
+#	to.reportMatch(5, [0,2,0])
+#	to.reportMatch(6, [0,2,0])
+#	to.reportMatch(7, [0,2,0])
+#	to.reportMatch(8, [0,2,0])
+#	to.reportMatch(9, [0,2,0])
+
+	# round 2
+#	to.reportMatch(1, [2,0,0])
+#	to.reportMatch(2, [2,0,0])
+#	to.reportMatch(3, [0,2,0])
+#	to.reportMatch(4, [2,0,0])
+#	to.reportMatch(5, [2,0,0])
+#	to.reportMatch(6, [0,2,0])
+#	to.reportMatch(7, [2,0,0])
+#	to.reportMatch(8, [2,0,0])
+#	to.reportMatch(9, [0,2,0])
+
+	# round 3
+#	to.reportMatch(1, [2,0,0])
+#	to.reportMatch(2, [0,2,0])
+#	to.reportMatch(3, [2,0,0])
+#	to.reportMatch(4, [0,2,0])
+#	to.reportMatch(5, [2,0,0])
+#	to.reportMatch(6, [0,2,0])
+#	to.reportMatch(7, [2,0,0])
+#	to.reportMatch(8, [0,2,0])
+#	to.reportMatch(9, [2,0,0])
+
+	# round 4
+#	to.reportMatch(1, [0,2,0])
+#	to.reportMatch(2, [0,2,0])
+#	to.reportMatch(3, [0,2,0])
+#	to.reportMatch(4, [0,2,0])
+#	to.reportMatch(5, [0,2,0])
+#	to.reportMatch(6, [2,0,0])
+#	to.reportMatch(7, [2,0,0])
+#	to.reportMatch(8, [0,2,0])
+#	to.reportMatch(9, [0,2,0])
+
+	# round 5
+	to.reportMatch(1, [2,0,0])
+	to.reportMatch(2, [0,2,0])
+	to.reportMatch(3, [0,2,0])
+	to.reportMatch(4, [2,0,0])
+	to.reportMatch(5, [0,2,0])
+	to.reportMatch(6, [2,0,0])
+	to.reportMatch(7, [2,0,0])
+	to.reportMatch(8, [2,0,0])
+	to.reportMatch(9, [2,0,0])
 
 	print_standing()
 	sys.exit(1)
